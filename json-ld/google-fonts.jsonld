@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gfonts": "https://developers.google.com/fonts/docs/developer_api#",
+    "family": {
+      "@id": "gfonts:family",
+      "@type": "xsd:string"
+    },
+    "variants": {
+      "@id": "gfonts:variants",
+      "@container": "@list"
+    },
+    "subsets": {
+      "@id": "gfonts:subsets",
+      "@container": "@list"
+    },
+    "version": {
+      "@id": "gfonts:version",
+      "@type": "xsd:string"
+    },
+    "lastModified": {
+      "@id": "gfonts:lastModified",
+      "@type": "xsd:date"
+    },
+    "category": {
+      "@id": "gfonts:category",
+      "@type": "xsd:string"
+    },
+    "files": {
+      "@id": "gfonts:files",
+      "@type": "@id"
+    },
+    "axes": {
+      "@id": "gfonts:axes",
+      "@container": "@list"
+    },
+    "tag": {
+      "@id": "gfonts:tag",
+      "@type": "xsd:string"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

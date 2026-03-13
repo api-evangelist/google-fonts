@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-schema/google-fonts.json",
+  "title": "Google Fonts Developer API Schema",
+  "description": "JSON Schema for the Google Fonts Developer API response objects.",
+  "type": "object",
+  "$defs": {
+    "WebfontList": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "webfonts#webfontList"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Webfont"
+          }
+        }
+      }
+    },
+    "Webfont": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "type": "string",
+          "description": "The name of the font family."
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Available font variants."
+        },
+        "subsets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Supported character subsets."
+        },
+        "version": {
+          "type": "string",
+          "description": "The version of the font family."
+        },
+        "lastModified": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the font was last modified."
+        },
+        "files": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "Map of variant names to font file URLs."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["serif", "sans-serif", "monospace", "display", "handwriting"],
+          "description": "The category of the font."
+        },
+        "kind": {
+          "type": "string",
+          "const": "webfonts#webfont"
+        },
+        "axes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Axis"
+          },
+          "description": "Variable font axes."
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Font tags."
+        }
+      }
+    },
+    "Axis": {
+      "type": "object",
+      "properties": {
+        "tag": {
+          "type": "string",
+          "description": "The axis tag (e.g., wght, wdth)."
+        },
+        "start": {
+          "type": "number",
+          "description": "Minimum value of the axis."
+        },
+        "end": {
+          "type": "number",
+          "description": "Maximum value of the axis."
+        }
+      }
+    }
+  }
+}
