@@ -1,5 +1,5 @@
 aid: google-fonts
-name: Google Fonts Developer API
+name: Google Fonts Developer
 description: >-
   The Google Fonts Developer API provides programmatic access to the metadata for
   all font families served by Google Fonts. Developers can query for available
