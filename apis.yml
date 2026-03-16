@@ -1,3 +1,4 @@
+aid: google-fonts
 name: Google Fonts Developer API
 description: >-
   The Google Fonts Developer API provides programmatic access to the metadata for
@@ -8,8 +9,9 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Fonts
   - Web Fonts
@@ -25,17 +27,35 @@ apis:
     humanURL: https://developers.google.com/fonts/docs/developer_api
     baseURL: https://www.googleapis.com/webfonts/v1
     properties:
+      - type: Documentation
+        url: https://developers.google.com/fonts/docs/developer_api
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/openapi/openapi.yml
+      - type: Authentication
+        url: https://developers.google.com/fonts/docs/developer_api#APIKey
+      - type: Getting Started
+        url: https://developers.google.com/fonts/docs/getting_started
       - type: JSONSchema
         url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-schema/google-fonts.json
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-ld/google-fonts.jsonld
 common:
-  - type: GettingStarted
+  - type: Portal
+    url: https://fonts.google.com/
+  - type: Getting Started
     url: https://developers.google.com/fonts/docs/getting_started
-  - type: Pricing
+  - type: Documentation
     url: https://developers.google.com/fonts
+  - type: Authentication
+    url: https://developers.google.com/fonts/docs/developer_api#APIKey
+  - type: Terms of Service
+    url: https://developers.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://developers.google.com/fonts/docs/support
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-ld/google-fonts.jsonld
 maintainers:
