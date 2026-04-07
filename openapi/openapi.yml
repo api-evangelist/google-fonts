@@ -27,7 +27,7 @@ paths:
   /webfonts/v1/webfonts:
     get:
       operationId: listWebfonts
-      summary: List Web Fonts
+      summary: Google Fonts Developer List Web Fonts
       description: >-
         Retrieves the list of font families available from Google Fonts with
         metadata including variants, subsets, version, and file URLs.
