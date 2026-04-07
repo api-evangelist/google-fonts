@@ -13,12 +13,12 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Fonts
-  - Web Fonts
-  - Typography
-  - Google Fonts
-  - Design
   - CSS
+  - Design
+  - Fonts
+  - Google Fonts
+  - Typography
+  - Web Fonts
 apis:
   - name: Google Fonts Developer API
     description: >-
