@@ -1,0 +1,115 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Fonts Developer API
+  description: The Google Fonts Developer API provides programmatic access to the metadata for all font families served by
+    Google Fonts. It allows applications to query for available font families, retrieve details about variants, subsets, categories,
+    and file URLs, and supports filtering, sorting, and variable font metadata.
+  tags:
+  - Google
+  - Fonts
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: google-fonts
+    baseUri: https://www.googleapis.com
+    description: Google Fonts Developer API HTTP API.
+    resources:
+    - name: webfonts-v1-webfonts
+      path: /webfonts/v1/webfonts
+      operations:
+      - name: listwebfonts
+        method: GET
+        description: Google Fonts Developer List Web Fonts
+        inputParameters:
+        - name: key
+          in: query
+          type: string
+          required: true
+          description: API key for authentication
+        - name: sort
+          in: query
+          type: string
+          description: Sort order for the font list.
+        - name: family
+          in: query
+          type: string
+          description: Filter by font family name.
+        - name: subset
+          in: query
+          type: string
+          description: Filter by character subset (e.g., latin, greek, cyrillic).
+        - name: category
+          in: query
+          type: string
+          description: Filter by font category.
+        - name: capability
+          in: query
+          type: string
+          description: Request additional capabilities like WOFF2, variable fonts (VF), or family tags.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: google-fonts-rest
+    description: REST adapter for Google Fonts Developer API.
+    resources:
+    - path: /webfonts/v1/webfonts
+      name: listwebfonts
+      operations:
+      - method: GET
+        name: listwebfonts
+        description: Google Fonts Developer List Web Fonts
+        call: google-fonts.listwebfonts
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: google-fonts-mcp
+    transport: http
+    description: MCP adapter for Google Fonts Developer API for AI agent use.
+    tools:
+    - name: listwebfonts
+      description: Google Fonts Developer List Web Fonts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-fonts.listwebfonts
+      with:
+        key: tools.key
+        sort: tools.sort
+        family: tools.family
+        subset: tools.subset
+        category: tools.category
+        capability: tools.capability
+      inputParameters:
+      - name: key
+        type: string
+        description: API key for authentication
+        required: true
+      - name: sort
+        type: string
+        description: Sort order for the font list.
+      - name: family
+        type: string
+        description: Filter by font family name.
+      - name: subset
+        type: string
+        description: Filter by character subset (e.g., latin, greek, cyrillic).
+      - name: category
+        type: string
+        description: Filter by font category.
+      - name: capability
+        type: string
+        description: Request additional capabilities like WOFF2, variable fonts (VF), or family tags.
+      outputParameters:
+      - type: object
+        mapping: $.
