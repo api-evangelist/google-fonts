@@ -33,7 +33,7 @@ apis:
         url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/openapi/openapi.yml
       - type: Authentication
         url: https://developers.google.com/fonts/docs/developer_api#APIKey
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.google.com/fonts/docs/getting_started
       - type: JSONSchema
         url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-schema/google-fonts.json
@@ -42,17 +42,17 @@ apis:
 common:
   - type: Portal
     url: https://fonts.google.com/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developers.google.com/fonts/docs/getting_started
   - type: Documentation
     url: https://developers.google.com/fonts
   - type: Authentication
     url: https://developers.google.com/fonts/docs/developer_api#APIKey
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://developers.google.com/terms
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://policies.google.com/privacy
-  - type: Status
+  - type: StatusPage
     url: https://status.cloud.google.com/
   - type: Support
     url: https://developers.google.com/fonts/docs/support
