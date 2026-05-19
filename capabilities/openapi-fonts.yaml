@@ -1,21 +1,23 @@
 naftiko: 1.0.0-alpha2
 info:
-  label: Google Fonts Developer API
-  description: The Google Fonts Developer API provides programmatic access to the metadata for all font families served by
-    Google Fonts. It allows applications to query for available font families, retrieve details about variants, subsets, categories,
-    and file URLs, and supports filtering, sorting, and variable font metadata.
+  label: Google Fonts Developer API — Fonts
+  description: 'Google Fonts Developer API — Fonts. 1 operations. Lead operation: Google Fonts Developer List Web Fonts. Self-contained
+    Naftiko capability covering one Google Fonts business surface.'
   tags:
-  - Google
+  - Google Fonts
   - Fonts
-  - API
-  created: '2026-05-06'
-  modified: '2026-05-06'
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_FONTS_API_KEY: GOOGLE_FONTS_API_KEY
 capability:
   consumes:
   - type: http
-    namespace: google-fonts
+    namespace: openapi-fonts
     baseUri: https://www.googleapis.com
-    description: Google Fonts Developer API HTTP API.
+    description: Google Fonts Developer API — Fonts business capability. Self-contained, no shared references.
     resources:
     - name: webfonts-v1-webfonts
       path: /webfonts/v1/webfonts
@@ -23,12 +25,17 @@ capability:
       - name: listwebfonts
         method: GET
         description: Google Fonts Developer List Web Fonts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
         inputParameters:
         - name: key
           in: query
           type: string
-          required: true
           description: API key for authentication
+          required: true
         - name: sort
           in: query
           type: string
@@ -49,40 +56,45 @@ capability:
           in: query
           type: string
           description: Request additional capabilities like WOFF2, variable fonts (VF), or family tags.
-        outputRawFormat: json
-        outputParameters:
-        - name: result
-          type: object
-          value: $.
   exposes:
   - type: rest
+    namespace: openapi-fonts-rest
     port: 8080
-    namespace: google-fonts-rest
-    description: REST adapter for Google Fonts Developer API.
+    description: REST adapter for Google Fonts Developer API — Fonts. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
     resources:
-    - path: /webfonts/v1/webfonts
-      name: listwebfonts
+    - path: /v1/webfonts/v1/webfonts
+      name: webfonts-v1-webfonts
+      description: REST surface for webfonts-v1-webfonts.
       operations:
       - method: GET
         name: listwebfonts
         description: Google Fonts Developer List Web Fonts
-        call: google-fonts.listwebfonts
+        call: openapi-fonts.listwebfonts
+        with:
+          key: rest.key
+          sort: rest.sort
+          family: rest.family
+          subset: rest.subset
+          category: rest.category
+          capability: rest.capability
         outputParameters:
         - type: object
           mapping: $.
   - type: mcp
+    namespace: openapi-fonts-mcp
     port: 9090
-    namespace: google-fonts-mcp
     transport: http
-    description: MCP adapter for Google Fonts Developer API for AI agent use.
+    description: MCP adapter for Google Fonts Developer API — Fonts. One tool per consumed operation, routed inline through
+      this capability's consumes block.
     tools:
-    - name: listwebfonts
+    - name: google-fonts-developer-list-web
       description: Google Fonts Developer List Web Fonts
       hints:
         readOnly: true
         destructive: false
         idempotent: true
-      call: google-fonts.listwebfonts
+      call: openapi-fonts.listwebfonts
       with:
         key: tools.key
         sort: tools.sort
@@ -90,26 +102,6 @@ capability:
         subset: tools.subset
         category: tools.category
         capability: tools.capability
-      inputParameters:
-      - name: key
-        type: string
-        description: API key for authentication
-        required: true
-      - name: sort
-        type: string
-        description: Sort order for the font list.
-      - name: family
-        type: string
-        description: Filter by font family name.
-      - name: subset
-        type: string
-        description: Filter by character subset (e.g., latin, greek, cyrillic).
-      - name: category
-        type: string
-        description: Filter by font category.
-      - name: capability
-        type: string
-        description: Request additional capabilities like WOFF2, variable fonts (VF), or family tags.
       outputParameters:
       - type: object
         mapping: $.
