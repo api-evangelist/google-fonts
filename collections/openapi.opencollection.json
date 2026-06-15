@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Fonts Developer API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fonts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Fonts Developer List Web Fonts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/webfonts/v1/webfonts",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "API key for authentication"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Sort order for the font list."
+              },
+              {
+                "name": "family",
+                "value": "",
+                "type": "query",
+                "description": "Filter by font family name."
+              },
+              {
+                "name": "subset",
+                "value": "",
+                "type": "query",
+                "description": "Filter by character subset (e.g., latin, greek, cyrillic)."
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query",
+                "description": "Filter by font category."
+              },
+              {
+                "name": "capability",
+                "value": "",
+                "type": "query",
+                "description": "Request additional capabilities like WOFF2, variable fonts (VF), or family tags."
+              }
+            ]
+          },
+          "docs": "Retrieves the list of font families available from Google Fonts with metadata including variants, subsets, version, and file URLs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
