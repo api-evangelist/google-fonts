@@ -5,7 +5,7 @@ description: >-
   Fonts. Developers can query for available font families, retrieve details about variants, subsets, and categories,
   access font file URLs, and work with variable font axis metadata. The API supports sorting and filtering to help
   applications discover and integrate web fonts.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
