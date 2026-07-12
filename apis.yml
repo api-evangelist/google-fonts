@@ -39,6 +39,10 @@ apis:
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-ld/google-fonts.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-fonts-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-fonts-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/google
   - type: LinkedIn
