@@ -1,0 +1,14 @@
+{
+  "provider": "google-fonts",
+  "sources": [
+    "google-fonts-fonts-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-fonts-fonts-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

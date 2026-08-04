@@ -1,0 +1,183 @@
+{
+  "info": {
+    "_postman_id": "9c07af7c-9473-4d2e-80e6-bbea499f8238",
+    "name": "Google Developer Fonts API",
+    "description": "The Google Fonts Developer API provides programmatic access to the metadata for all font families served by Google Fonts. It allows applications to query for available font families, retrieve details about variants, subsets, categories, and file URLs, and supports filtering, sorting, and variable font metadata.\n\nContact Support:\n Name: Google Fonts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:49:12.000Z",
+    "updatedAt": "2026-07-28T01:49:12.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9c07af7c-9473-4d2e-80e6-bbea499f8238"
+  },
+  "item": [
+    {
+      "name": "webfonts",
+      "item": [
+        {
+          "name": "v1",
+          "item": [
+            {
+              "name": "webfonts",
+              "item": [
+                {
+                  "name": "Google Fonts Developer List Web Fonts",
+                  "id": "fb9b6f63-0ac8-41c2-963b-c303fc5cc2fc",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webfonts/v1/webfonts?key=<string>&sort=style&family=<string>&subset=<string>&category=handwriting&capability=WOFF2",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webfonts",
+                        "v1",
+                        "webfonts"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) API key for authentication",
+                          "key": "key",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Sort order for the font list.",
+                          "key": "sort",
+                          "value": "style"
+                        },
+                        {
+                          "description": "Filter by font family name.",
+                          "key": "family",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Filter by character subset (e.g., latin, greek, cyrillic).",
+                          "key": "subset",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Filter by font category.",
+                          "key": "category",
+                          "value": "handwriting"
+                        },
+                        {
+                          "description": "Request additional capabilities like WOFF2, variable fonts (VF), or family tags.",
+                          "key": "capability",
+                          "value": "WOFF2"
+                        }
+                      ]
+                    },
+                    "description": "Retrieves the list of font families available from Google Fonts with metadata including variants, subsets, version, and file URLs."
+                  },
+                  "response": [
+                    {
+                      "id": "8f25f352-2df0-4775-93ed-57369d900c67",
+                      "name": "Successful response with list of font families.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/webfonts/v1/webfonts?key=<string>&sort=style&family=<string>&subset=<string>&category=handwriting&capability=WOFF2",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "webfonts",
+                            "v1",
+                            "webfonts"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) API key for authentication",
+                              "key": "key",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Sort order for the font list.",
+                              "key": "sort",
+                              "value": "style"
+                            },
+                            {
+                              "description": "Filter by font family name.",
+                              "key": "family",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Filter by character subset (e.g., latin, greek, cyrillic).",
+                              "key": "subset",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Filter by font category.",
+                              "key": "category",
+                              "value": "handwriting"
+                            },
+                            {
+                              "description": "Request additional capabilities like WOFF2, variable fonts (VF), or family tags.",
+                              "key": "capability",
+                              "value": "WOFF2"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"kind\": \"<string>\",\n  \"items\": [\n    {\n      \"family\": \"<string>\",\n      \"variants\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"subsets\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"version\": \"<string>\",\n      \"lastModified\": \"<date>\",\n      \"files\": {\n        \"anim98\": \"<uri>\",\n        \"sit_5e\": \"<uri>\"\n      },\n      \"category\": \"<string>\",\n      \"kind\": \"<string>\",\n      \"axes\": [\n        {\n          \"tag\": \"<string>\",\n          \"start\": \"<number>\",\n          \"end\": \"<number>\"\n        },\n        {\n          \"tag\": \"<string>\",\n          \"start\": \"<number>\",\n          \"end\": \"<number>\"\n        }\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"family\": \"<string>\",\n      \"variants\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"subsets\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"version\": \"<string>\",\n      \"lastModified\": \"<date>\",\n      \"files\": {\n        \"occaecata4\": \"<uri>\",\n        \"velit3d\": \"<uri>\"\n      },\n      \"category\": \"<string>\",\n      \"kind\": \"<string>\",\n      \"axes\": [\n        {\n          \"tag\": \"<string>\",\n          \"start\": \"<number>\",\n          \"end\": \"<number>\"\n        },\n        {\n          \"tag\": \"<string>\",\n          \"start\": \"<number>\",\n          \"end\": \"<number>\"\n        }\n      ],\n      \"tags\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+                      "createdAt": "2026-07-28T01:49:12.000Z",
+                      "updatedAt": "2026-07-28T01:49:12.000Z",
+                      "uid": "35240-8f25f352-2df0-4775-93ed-57369d900c67"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:49:12.000Z",
+                  "updatedAt": "2026-07-28T01:49:12.000Z",
+                  "uid": "35240-fb9b6f63-0ac8-41c2-963b-c303fc5cc2fc"
+                }
+              ],
+              "id": "11d4fdeb-30cb-4e79-838f-cb003f3037c5",
+              "createdAt": "2026-07-28T01:49:12.000Z",
+              "updatedAt": "2026-07-28T01:49:12.000Z",
+              "uid": "35240-11d4fdeb-30cb-4e79-838f-cb003f3037c5"
+            }
+          ],
+          "id": "b850c49a-a5b2-4d96-ad14-86ba0b391cf7",
+          "createdAt": "2026-07-28T01:49:12.000Z",
+          "updatedAt": "2026-07-28T01:49:12.000Z",
+          "uid": "35240-b850c49a-a5b2-4d96-ad14-86ba0b391cf7"
+        }
+      ],
+      "id": "87b5873c-bf3f-4ff7-98ef-ae2f706e48bc",
+      "createdAt": "2026-07-28T01:49:12.000Z",
+      "updatedAt": "2026-07-28T01:49:12.000Z",
+      "uid": "35240-87b5873c-bf3f-4ff7-98ef-ae2f706e48bc"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://www.googleapis.com"
+    }
+  ]
+}
