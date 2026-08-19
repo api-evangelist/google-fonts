@@ -1,0 +1,168 @@
+{
+  "item": [
+    {
+      "id": "b1685b8b-cdce-4096-9b20-0192c5938933",
+      "name": "Fonts",
+      "description": {
+        "content": "Retrieve font family metadata",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1fb9d51a-8123-49aa-adcb-365243a49b94",
+          "name": "Google Fonts Developer List Web Fonts",
+          "request": {
+            "name": "Google Fonts Developer List Web Fonts",
+            "description": {
+              "content": "Retrieves the list of font families available from Google Fonts with metadata including variants, subsets, version, and file URLs.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webfonts",
+                "v1",
+                "webfonts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key for authentication"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Sort order for the font list."
+                },
+                {
+                  "disabled": false,
+                  "key": "family",
+                  "value": "<string>",
+                  "description": "Filter by font family name."
+                },
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": "Filter by character subset (e.g., latin, greek, cyrillic)."
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>",
+                  "description": "Filter by font category."
+                },
+                {
+                  "disabled": false,
+                  "key": "capability",
+                  "value": "<string>",
+                  "description": "Request additional capabilities like WOFF2, variable fonts (VF), or family tags."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0774ad7a-b17e-4221-96b0-2cb21a9a8571",
+              "name": "Successful response with list of font families.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webfonts",
+                    "v1",
+                    "webfonts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "family",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "capability",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"items\": [\n    {\n      \"family\": \"string\",\n      \"variants\": [\n        \"string\",\n        \"string\"\n      ],\n      \"subsets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"version\": \"string\",\n      \"lastModified\": \"1996-07-20\",\n      \"files\": {\n        \"key_0\": \"http://eMbwgDJiQLzbeY.lrMwzBoQAGsxttmwOUhsSLo3g,wYVLLh3Ph,P4pmq\"\n      },\n      \"category\": \"string\",\n      \"kind\": \"string\",\n      \"axes\": [\n        {\n          \"tag\": \"string\",\n          \"start\": 1777.9189301911358,\n          \"end\": 2367.852839568608\n        },\n        {\n          \"tag\": \"string\",\n          \"start\": 5098.039568956259,\n          \"end\": 8194.043711142862\n        }\n      ],\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"family\": \"string\",\n      \"variants\": [\n        \"string\",\n        \"string\"\n      ],\n      \"subsets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"version\": \"string\",\n      \"lastModified\": \"1955-07-27\",\n      \"files\": {\n        \"key_0\": \"https://tobLnregTNOyvQwtfOGzdzU.cjsRsLTNg,rJK,N+W\",\n        \"key_1\": \"http://lKPc.dhFZ1K9XfbhlrY9XgipnkXUe8tJlFgKwhk2ab-.O\"\n      },\n      \"category\": \"string\",\n      \"kind\": \"string\",\n      \"axes\": [\n        {\n          \"tag\": \"string\",\n          \"start\": 2693.4035997900896,\n          \"end\": 8634.514537314371\n        },\n        {\n          \"tag\": \"string\",\n          \"start\": 8044.610859295442,\n          \"end\": 7806.2863712268245\n        }\n      ],\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a6bcbb0e-bbd2-412c-8c80-58aa9cdbd3df",
+    "name": "Google Developer Fonts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Fonts Developer API provides programmatic access to the metadata for all font families served by Google Fonts. It allows applications to query for available font families, retrieve details about variants, subsets, categories, and file URLs, and supports filtering, sorting, and variable font metadata.\n\nContact Support:\n Name: Google Fonts",
+      "type": "text/plain"
+    }
+  }
+}
