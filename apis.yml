@@ -5,6 +5,18 @@ description: >-
   Fonts. Developers can query for available font families, retrieve details about variants, subsets, and categories,
   access font file URLs, and work with variable font axis metadata. The API supports sorting and filtering to help
   applications discover and integrate web fonts.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
