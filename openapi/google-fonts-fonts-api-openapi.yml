@@ -80,18 +80,16 @@ paths:
                 $ref: '#/components/schemas/WebfontList'
 components:
   schemas:
-    Axis:
+    WebfontList:
       type: object
       properties:
-        tag:
+        kind:
           type: string
-          description: The axis tag (e.g., wght, wdth).
-        start:
-          type: number
-          description: The minimum value of the axis.
-        end:
-          type: number
-          description: The maximum value of the axis.
+          description: The type of resource (webfonts#webfontList).
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Webfont'
     Webfont:
       type: object
       properties:
@@ -137,16 +135,18 @@ components:
           items:
             type: string
           description: Font tags (when capability=FAMILY_TAGS).
-    WebfontList:
+    Axis:
       type: object
       properties:
-        kind:
+        tag:
           type: string
-          description: The type of resource (webfonts#webfontList).
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Webfont'
+          description: The axis tag (e.g., wght, wdth).
+        start:
+          type: number
+          description: The minimum value of the axis.
+        end:
+          type: number
+          description: The maximum value of the axis.
 externalDocs:
   description: Google Fonts Developer API Documentation
   url: https://developers.google.com/fonts/docs/developer_api
