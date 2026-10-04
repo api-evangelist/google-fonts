@@ -80,16 +80,6 @@ paths:
                 $ref: '#/components/schemas/WebfontList'
 components:
   schemas:
-    WebfontList:
-      type: object
-      properties:
-        kind:
-          type: string
-          description: The type of resource (webfonts#webfontList).
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Webfont'
     Webfont:
       type: object
       properties:
@@ -147,6 +137,16 @@ components:
         end:
           type: number
           description: The maximum value of the axis.
+    WebfontList:
+      type: object
+      properties:
+        kind:
+          type: string
+          description: The type of resource (webfonts#webfontList).
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Webfont'
 externalDocs:
   description: Google Fonts Developer API Documentation
   url: https://developers.google.com/fonts/docs/developer_api
