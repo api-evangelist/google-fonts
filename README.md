@@ -1,4 +1,4 @@
-# Google Fonts Developer (google-fonts)
+# Google Fonts Developer
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,141 @@
 
 The Google Fonts Developer API provides programmatic access to the metadata for all font families served by Google Fonts. Developers can query for available font families, retrieve details about variants, subsets, and categories, access font file URLs, and work with variable font axis metadata. The API supports sorting and filtering to help applications discover and integrate web fonts.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/apis.yml)
+**Areas:** CSS · Design · Fonts · Google Fonts · Typography · Web Fonts
 
-## Scope
+## Google Fonts Developer on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Fonts Developer is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-fonts/](https://apis.io/providers/google-fonts/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- CSS
-- Design
-- Fonts
-- Google Fonts
-- Typography
-- Web Fonts
+- [Google Fonts Developer Fonts API](https://apis.io/apis/google-fonts/google-fonts-fonts-api/) — Retrieve font family metadata
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Fonts Developer API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for listing and querying Google Fonts families including metadata about variants, subsets, categories, and variable font axes.
+- [Google Fonts Agentic Access](https://apis.io/agentic-access/google-fonts/google-fonts-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/fonts/docs/developer_api](https://developers.google.com/fonts/docs/developer_api)
-- **Base URL:** `https://www.googleapis.com/webfonts/v1`
+#### JSON Schema (1)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://developers.google.com/fonts/docs/developer_api)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://developers.google.com/fonts/docs/developer_api#APIKey)
-- [Getting Started](https://developers.google.com/fonts/docs/getting_started)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-schema/google-fonts.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-ld/google-fonts.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Google Fonts Developer API Schema](https://apis.io/schemas/google-fonts/google-fonts/)
 
-## Common Properties
+#### JSON-LD (1)
 
-- [GitHub Organization](https://github.com/google)
-- [LinkedIn](https://www.linkedin.com/company/google-fonts)
-- [Portal](https://fonts.google.com/)
-- [Getting Started](https://developers.google.com/fonts/docs/getting_started)
+Linked-data contexts for the provider's vocabulary.
+
+- [Google Fonts Context](https://apis.io/jsonld/google-fonts/google-fonts/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Google Developer Fonts API](https://apis.io/collections/google-fonts/open-google-fonts-fonts-api/)
+- [Google Fonts Developer API](https://apis.io/collections/google-fonts/open-openapi/)
+- [Google Developer Fonts API](https://apis.io/collections/google-fonts/postman-google-fonts-fonts-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Fonts Developer — jsonschema rules](https://apis.io/rules/google-fonts/google-fonts-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Fonts Domain Security](https://apis.io/security/google-fonts/google-fonts-domain-security/)
+- [Google Fonts Vulnerability Disclosure](https://apis.io/security/google-fonts/google-fonts-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Fonts Plans Pricing](https://apis.io/plans/google-fonts/google-fonts-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Fonts Rate Limits](https://apis.io/rate-limits/google-fonts/google-fonts-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Fonts Finops](https://apis.io/finops/google-fonts/google-fonts-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://developers.google.com/fonts)
-- [Authentication](https://developers.google.com/fonts/docs/developer_api#APIKey)
-- [Terms of Service](https://developers.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
+- [Getting started](https://developers.google.com/fonts/docs/getting_started)
 - [Support](https://developers.google.com/fonts/docs/support)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-fonts/refs/heads/main/json-ld/google-fonts.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Terms of service](https://developers.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/google)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 42.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 51.8 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 44.0 |
+| Access clarity | 28.9 |
+
+**Agent readiness 19.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-fonts/](https://apis.io/providers/google-fonts/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Fonts Developer: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-fonts/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
